@@ -3,6 +3,9 @@
 #include "Peoples.h"
 using namespace System;
 using namespace System::Windows::Forms;
+
+
+//Эта штука внизу не нужна ???
 /*
 [STAThreadAttribute]
 int peoples(array<String^>^ arg)
@@ -18,6 +21,7 @@ int peoples(array<String^>^ arg)
 
 }
 */
+
 
 System::Void Equipment1::Peoples::оборудованиеToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 {

@@ -3,6 +3,7 @@
 #include "Peoples.h"
 using namespace System;
 using namespace System::Windows::Forms;
+using namespace System::Data::OleDb;
 
  [STAThreadAttribute]
  int main(array<String^>^ arg)
@@ -12,8 +13,30 @@ using namespace System::Windows::Forms;
 
 	 Equipment1::Active form;
 	 Application::Run(% form);
+	 // подключение бд
+	 String^ connectionString = "provider-Microsoft.Jet.OLEDB.4.0;Data Source-Database.mdb";
+	 OleDbConnection^ dbConnection = gcnew OleDbConnection(connectionString);
+	 // запрос к бд
+	 dbConnection->Open(); // открываем соединение
+	 String^ query = "SELECT * FROM [table_name]";// запрос
+	 OleDbCommand^ dbComand = gcnew OleDbCommand(query, dbConnection);// команда
+	 OleDbDataReader^ dbReader = dbComand->ExecuteReader();//считываем данные
+
+	 //Проверяем данные 
+	 if (dbReader->HasRows==false)
+	 {
+		 MessageBox::Show("Ошибка считывания данных!","Ошибка!");
+	 }
+	 else {
+		 //заполним данные в таблицу формы
+
+		 while (dbReader->Read())
+		 {
+			 dataGridView3->Rows->Add(dbReader["id"], dbReader["Name"], dbReader["Price"], dbReader["Quality"]);
+		 }
 
 
+	 }
 
 
  }

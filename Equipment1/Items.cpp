@@ -4,7 +4,7 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
-
+//Эта штука внизу не нужна ???
 /*
 [STAThreadAttribute]
 int items(array<String^>^ arg)

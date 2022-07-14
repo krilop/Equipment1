@@ -33,17 +33,37 @@ namespace Equipment1 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::DataGridView^ dataGridView2;
 	protected:
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ id_item;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Name_Item;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ price;
-	private: System::Windows::Forms::DataGridViewCheckBoxColumn^ issued;
+
+	protected:
+
+
+
+
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^ ïåğåõîäToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ îáîğóäîâàíèåToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ ğàáîòíèêèToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ ñïèñàíèåToolStripMenuItem;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ id_people;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Name_people;
+	private: System::Windows::Forms::DataGridViewComboBoxColumn^ wear;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	private:
 		/// <summary>
@@ -58,51 +78,50 @@ namespace Equipment1 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->id_item = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Name_Item = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->price = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->issued = (gcnew System::Windows::Forms::DataGridViewCheckBoxColumn());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->id_people = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Name_people = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->wear = (gcnew System::Windows::Forms::DataGridViewComboBoxColumn());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->ïåğåõîäToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->îáîğóäîâàíèåToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ğàáîòíèêèToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ñïèñàíèåToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
-			// dataGridView1
+			// dataGridView2
 			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
-				this->id_item,
-					this->Name_Item, this->price, this->issued
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(3) {
+				this->id_people,
+					this->Name_people, this->wear
 			});
-			this->dataGridView1->Location = System::Drawing::Point(37, 133);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->Size = System::Drawing::Size(639, 257);
-			this->dataGridView1->TabIndex = 0;
+			this->dataGridView2->Location = System::Drawing::Point(37, 133);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->Size = System::Drawing::Size(639, 257);
+			this->dataGridView2->TabIndex = 0;
 			// 
-			// id_item
+			// id_people
 			// 
-			this->id_item->HeaderText = L"id";
-			this->id_item->Name = L"id_item";
+			this->id_people->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->id_people->HeaderText = L"id";
+			this->id_people->Name = L"id_people";
+			this->id_people->Width = 40;
 			// 
-			// Name_Item
+			// Name_people
 			// 
-			this->Name_Item->HeaderText = L"Name";
-			this->Name_Item->Name = L"Name_Item";
+			this->Name_people->AutoSizeMode = System::Windows::Forms::DataGridViewAutoSizeColumnMode::AllCells;
+			this->Name_people->HeaderText = L"Name";
+			this->Name_people->Name = L"Name_people";
+			this->Name_people->Width = 60;
 			// 
-			// price
+			// wear
 			// 
-			this->price->HeaderText = L"Price";
-			this->price->Name = L"price";
-			// 
-			// issued
-			// 
-			this->issued->HeaderText = L"Issued";
-			this->issued->Name = L"issued";
+			this->wear->HeaderText = L"wear";
+			this->wear->Name = L"wear";
+			this->wear->Resizable = System::Windows::Forms::DataGridViewTriState::True;
 			// 
 			// menuStrip1
 			// 
@@ -144,17 +163,19 @@ namespace Equipment1 {
 			this->ñïèñàíèåToolStripMenuItem->Text = L"Ñïèñàíèå";
 			this->ñïèñàíèåToolStripMenuItem->Click += gcnew System::EventHandler(this, &Peoples::ñïèñàíèåToolStripMenuItem_Click);
 			// 
-			// Active
+			// Peoples
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::InactiveCaption;
 			this->ClientSize = System::Drawing::Size(1009, 496);
-			this->Controls->Add(this->dataGridView1);
+			this->Controls->Add(this->dataGridView2);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
-			this->Name = L"Active";
+			this->Name = L"Peoples";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Peoples";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
