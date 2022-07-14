@@ -21,12 +21,18 @@
     <ClCompile Include="Items.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Peoples.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Active.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Items.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Peoples.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
