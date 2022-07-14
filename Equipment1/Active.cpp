@@ -1,5 +1,5 @@
 #include "Active.h"
-
+#include "Items.h"
 using namespace System;
 using namespace System::Windows::Forms;
 
@@ -15,4 +15,22 @@ using namespace System::Windows::Forms;
 
 
 
+ }
+
+ System::Void Equipment1::Active::оборудованиеToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+ {
+	 Items^ f2 = gcnew Items(); // создание нового экземпляра
+	 f2->Show(); // Отрытие второй формы
+	// Archieve::Hide(); // Скрытие первой формы
+	 return System::Void();
+ }
+
+ System::Void Equipment1::Active::работникиToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+ {
+	 return System::Void();
+ }
+
+ System::Void Equipment1::Active::списаниеToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+ {
+	 return System::Void();
  }

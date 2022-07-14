@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Items.h"
 namespace Equipment1 {
 
 	using namespace System;
@@ -109,18 +109,21 @@ namespace Equipment1 {
 			this->îáîğóäîâàíèåToolStripMenuItem->Name = L"îáîğóäîâàíèåToolStripMenuItem";
 			this->îáîğóäîâàíèåToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->îáîğóäîâàíèåToolStripMenuItem->Text = L"Îáîğóäîâàíèå";
+			this->îáîğóäîâàíèåToolStripMenuItem->Click += gcnew System::EventHandler(this, &Active::îáîğóäîâàíèåToolStripMenuItem_Click);
 			// 
 			// ğàáîòíèêèToolStripMenuItem
 			// 
 			this->ğàáîòíèêèToolStripMenuItem->Name = L"ğàáîòíèêèToolStripMenuItem";
 			this->ğàáîòíèêèToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->ğàáîòíèêèToolStripMenuItem->Text = L"Ğàáîòíèêè";
+			this->ğàáîòíèêèToolStripMenuItem->Click += gcnew System::EventHandler(this, &Active::ğàáîòíèêèToolStripMenuItem_Click);
 			// 
 			// ñïèñàíèåToolStripMenuItem
 			// 
 			this->ñïèñàíèåToolStripMenuItem->Name = L"ñïèñàíèåToolStripMenuItem";
 			this->ñïèñàíèåToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->ñïèñàíèåToolStripMenuItem->Text = L"Ñïèñàíèå";
+			this->ñïèñàíèåToolStripMenuItem->Click += gcnew System::EventHandler(this, &Active::ñïèñàíèåToolStripMenuItem_Click);
 			// 
 			// id_item
 			// 
@@ -160,5 +163,8 @@ namespace Equipment1 {
 
 		}
 #pragma endregion
-	};
+	private: System::Void îáîğóäîâàíèåToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void ğàáîòíèêèToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void ñïèñàíèåToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+};
 }

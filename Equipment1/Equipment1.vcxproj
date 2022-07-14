@@ -121,15 +121,22 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Active.cpp" />
+    <ClCompile Include="Items.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Active.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Items.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Active.resx">
       <DependentUpon>Active.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Items.resx">
+      <DependentUpon>Items.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
