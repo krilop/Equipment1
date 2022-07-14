@@ -1,5 +1,4 @@
 #pragma once
-#include "Items.h"
 namespace Equipment1 {
 
 	using namespace System;

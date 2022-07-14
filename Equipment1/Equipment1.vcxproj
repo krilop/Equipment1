@@ -142,6 +142,9 @@
     <EmbeddedResource Include="Items.resx">
       <DependentUpon>Items.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Peoples.resx">
+      <DependentUpon>Peoples.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
